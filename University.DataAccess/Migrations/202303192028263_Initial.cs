@@ -184,7 +184,7 @@
             DropForeignKey("dbo.SpecializationsSubjects", "SubjectId", "dbo.Subjects");
             DropForeignKey("dbo.SpecializationsSubjects", "SpecializationId", "dbo.Specializations");
             DropForeignKey("dbo.SpecializationsSubjects", "CourseId", "dbo.Courses");
-            DropForeignKey("dbo.GroupsStudents", "StudentId", "dbo.Students");
+            DropForeignKey("dbo.GroupsStudents", "EducatorId", "dbo.Students");
             DropForeignKey("dbo.GroupsStudents", "GroupId", "dbo.Groups");
             DropForeignKey("dbo.FacultiesGroups", "GroupId", "dbo.Groups");
             DropForeignKey("dbo.FacultiesGroups", "FacultyId", "dbo.Faculties");
@@ -199,7 +199,7 @@
             DropIndex("dbo.Students", new[] { "Email" });
             DropIndex("dbo.Students", new[] { "PhoneNumber" });
             DropIndex("dbo.Students", new[] { "IdNumber" });
-            DropIndex("dbo.GroupsStudents", new[] { "StudentId" });
+            DropIndex("dbo.GroupsStudents", new[] { "EducatorId" });
             DropIndex("dbo.GroupsStudents", new[] { "GroupId" });
             DropIndex("dbo.FacultiesGroups", new[] { "GroupId" });
             DropIndex("dbo.FacultiesGroups", new[] { "FacultyId" });

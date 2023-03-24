@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using University.DataAccess.Models.Base;
 
 namespace University.DataAccess.Models
 {
     /// <summary>
-    /// Модель изучаемой дисциплины.
+    /// Модель роли.
     /// </summary>
-    [Table("Subjects")]
-    public sealed class Subject
+    [Table("Roles")]
+    public sealed class Role
     {
         /// <summary>
         /// Уникальный идентификатор.
@@ -16,17 +17,21 @@ namespace University.DataAccess.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Название.
+        /// Название роли.
         /// </summary>
         [Required]
-        [Index(IsUnique = true)]
-        [StringLength(100, MinimumLength = 2)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Описание.
+        /// Уникальный код.
         /// </summary>
         [Required]
-        public string Description { get; set; }
+        public int Code { get; set; }
+
+        /// <summary>
+        /// Роль пользователя.
+        /// </summary>
+        [NotMapped]
+        public UserRoles UserRole => (UserRoles)Code;
     }
 }

@@ -56,15 +56,47 @@
     <Compile Include="Migrations\202303192028263_Initial.designer.cs">
       <DependentUpon>202303192028263_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303192212494_Update1.cs" />
+    <Compile Include="Migrations\202303192212494_Update1.designer.cs">
+      <DependentUpon>202303192212494_Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303212140528_Update2.cs" />
+    <Compile Include="Migrations\202303212140528_Update2.designer.cs">
+      <DependentUpon>202303212140528_Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303221536541_Update3.cs" />
+    <Compile Include="Migrations\202303221536541_Update3.designer.cs">
+      <DependentUpon>202303221536541_Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303221554107_Update4.cs" />
+    <Compile Include="Migrations\202303221554107_Update4.designer.cs">
+      <DependentUpon>202303221554107_Update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303241155058_Update5.cs" />
+    <Compile Include="Migrations\202303241155058_Update5.designer.cs">
+      <DependentUpon>202303241155058_Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303241711255_Update6.cs" />
+    <Compile Include="Migrations\202303241711255_Update6.designer.cs">
+      <DependentUpon>202303241711255_Update6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EducatorRole.cs" />
+    <Compile Include="Models\StudentRole.cs" />
+    <Compile Include="Models\Base\IUser.cs" />
+    <Compile Include="Models\Base\UserRoles.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\CourseGroup.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\DepartmentFieldOfStudy.cs" />
     <Compile Include="Models\Educator.cs" />
     <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\FacultyFieldOfStudy.cs" />
     <Compile Include="Models\FacultyGroup.cs" />
     <Compile Include="Models\FieldOfStudy.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\GroupStudent.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Specialization.cs" />
     <Compile Include="Models\SpecializationSubject.cs" />
     <Compile Include="Models\Student.cs" />
@@ -80,7 +112,26 @@
     <EmbeddedResource Include="Migrations\202303192028263_Initial.resx">
       <DependentUpon>202303192028263_Initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303192212494_Update1.resx">
+      <DependentUpon>202303192212494_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303212140528_Update2.resx">
+      <DependentUpon>202303212140528_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303221536541_Update3.resx">
+      <DependentUpon>202303221536541_Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303221554107_Update4.resx">
+      <DependentUpon>202303221554107_Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303241155058_Update5.resx">
+      <DependentUpon>202303241155058_Update5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303241711255_Update6.resx">
+      <DependentUpon>202303241711255_Update6.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace University.DataAccess.Models
 {
     /// <summary>
-    /// Модель учебной группы.
+    /// Модель факультет-направление подготовки.
     /// </summary>
-    [Table("Groups")]
-    public sealed class Group
+    [Table("FacultiesFields")]
+    public sealed class FacultyFieldOfStudy
     {
         /// <summary>
         /// Уникальный идентификатор.
@@ -16,22 +16,23 @@ namespace University.DataAccess.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Код группы.
+        /// Идентификатор факультета.
         /// </summary>
-        [Required]
-        [Index(IsUnique = true)]
-        [StringLength(10, MinimumLength = 2)]
-        public string Name { get; set; }
-
+        public int FacultyId { get; set; }
 
         /// <summary>
-        /// Идентификатор направления получения (внешний ключ).
+        /// Идентификатор направления подготовки.
         /// </summary>
         public int FieldOfStudyId { get; set; }
 
+        /// <summary>
+        /// Факультет.
+        /// </summary>
+        [ForeignKey(nameof(FacultyId))]
+        public Faculty Faculty { get; set; }
 
         /// <summary>
-        /// Направление обучения.
+        /// Направление подготовки.
         /// </summary>
         [ForeignKey(nameof(FieldOfStudyId))]
         public FieldOfStudy FieldOfStudy { get; set; }

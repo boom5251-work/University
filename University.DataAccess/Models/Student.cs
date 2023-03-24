@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using University.DataAccess.Models.Base;
 
 namespace University.DataAccess.Models
 {
@@ -7,11 +8,8 @@ namespace University.DataAccess.Models
     /// Модель студента.
     /// </summary>
     [Table("Students")]
-    public sealed class Student
+    public sealed class Student : IUser
     {
-        /// <summary>
-        /// Уникальный идентификатор.
-        /// </summary>
         [Key]
         public int Id { get; set; }
 
@@ -51,17 +49,11 @@ namespace University.DataAccess.Models
         [Index(IsUnique = true)]
         public string PhoneNumber { get; set; }
 
-        /// <summary>
-        /// Адрес электронной почты.
-        /// </summary>
         [Required]
         [StringLength(320, MinimumLength = 6)]
         [Index(IsUnique = true)]
         public string Email { get; set; }
 
-        /// <summary>
-        /// Пароль.
-        /// </summary>
         [Required]
         [StringLength(50, MinimumLength = 6)]
         public string Password { get; set; }

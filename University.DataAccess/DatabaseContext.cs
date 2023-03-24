@@ -26,9 +26,24 @@ namespace University.DataAccess
         public DbSet<CourseGroup> CoursesGroups { get; set; }
 
         /// <summary>
+        /// Набор кафедр.
+        /// </summary>
+        public DbSet<Department> Departments { get; set; }
+
+        /// <summary>
+        /// Набор сущностей кафедра-направление подготовки.
+        /// </summary>
+        public DbSet<DepartmentFieldOfStudy> DepartmentsFields { get; set; }
+
+        /// <summary>
         /// Набор преподавателей.
         /// </summary>
         public DbSet<Educator> Educators { get; set; }
+
+        /// <summary>
+        /// Набор сущностей преподаватель-роль.
+        /// </summary>
+        public DbSet<EducatorRole> EducatorsRoles { get; set; }
 
         /// <summary>
         /// Набор факультетов.
@@ -36,7 +51,12 @@ namespace University.DataAccess
         public DbSet<Faculty> Faculties { get; set; }
 
         /// <summary>
-        /// Сущность факультет-группа.
+        /// Набор сущностей факультет-направление подготовки.
+        /// </summary>
+        public DbSet<FacultyFieldOfStudy> FacultyFields { get; set; }
+
+        /// <summary>
+        /// Набор сущностей факультет-группа.
         /// </summary>
         public DbSet<FacultyGroup> FacultiesGroups { get; set; }
 
@@ -56,6 +76,11 @@ namespace University.DataAccess
         public DbSet<GroupStudent> GroupsStudents { get; set; }
 
         /// <summary>
+        /// Набор ролей.
+        /// </summary>
+        public DbSet<Role> Roles { get; set; }
+
+        /// <summary>
         /// Набор специализаций.
         /// </summary>
         public DbSet<Specialization> Specializations { get; set; }
@@ -69,6 +94,11 @@ namespace University.DataAccess
         /// Набор студентов.
         /// </summary>
         public DbSet<Student> Students { get; set; }
+
+        /// <summary>
+        /// Набор сущностей студент-роль.
+        /// </summary>
+        public DbSet<StudentRole> StudentsRoles { get; set; }
 
         /// <summary>
         /// Набор дисциплин.
