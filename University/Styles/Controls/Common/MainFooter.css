@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+footer.main-footer {
+  margin: 0;
+  width: 100%;
+}
+footer.main-footer > .footer-content-container {
+  background-color: #3022FF;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+footer.main-footer > .footer-content-container > .info-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: calc((100% - 880px) / 2);
+  width: 240px;
+}
+footer.main-footer > .footer-content-container > .info-container > .logo-container {
+  border-bottom: 1px solid transparent;
+  box-sizing: border-box;
+  display: flex;
+  cursor: pointer;
+  height: 110px;
+}
+footer.main-footer > .footer-content-container > .info-container > .logo-container > img {
+  height: 50px;
+  margin: auto 0;
+}
+footer.main-footer > .footer-content-container > .info-container > .info-text-container {
+  display: flex;
+  height: 110px;
+}
+footer.main-footer > .footer-content-container > .info-container > .info-text-container > .info-text {
+  color: #AAA;
+  font-size: 13px;
+  margin: auto 0;
+}
+footer.main-footer > .footer-content-container > .info-container > .info-text-container > .info-text > .rights-reserved {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+footer.main-footer > .footer-content-container > .navigation {
+  background-color: #3022FF;
+  height: 220px;
+  width: 640px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-links-container {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-links-container > .navigation-links {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0 0 50px;
+  padding: 0;
+  transition: color 0.2s;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-links-container > .navigation-links > li {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-links-container > .navigation-links > li:hover {
+  color: #bfbbff;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom {
+  border-top: 1px solid #564bff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 50%;
+  padding-left: 50px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 1px solid #564bff;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box {
+  margin: auto 0;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box > .mailing-label {
+  display: block;
+  color: white;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box > .input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 60px 4px 0;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box > .input-container > .input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9088ff;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Manrope";
+  font-size: 13px;
+  height: 32px;
+  margin-right: -22px;
+  outline: none;
+  padding: 0 32px 0 0;
+  width: 100%;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box > .input-container > .input::placeholder {
+  color: #9088ff;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box > .input-container > .subscribe-button {
+  cursor: pointer;
+  height: 22px;
+  margin: 5px 0;
+  width: 22px;
+  transition: fill 0.2s;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .mailing-container > .mailing-input-box > .input-container > .subscribe-button:hover {
+  fill: white;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  width: 50%;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container > .socials-box {
+  margin: auto 0;
+  padding-left: 30px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container > .socials-box > .socials-label {
+  display: block;
+  color: white;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container > .socials-box > .links-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 32px;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container > .socials-box > .links-container > a {
+  height: 20px;
+  margin: auto 0;
+  width: 20px;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container > .socials-box > .links-container > a > svg {
+  fill: white;
+  transition: fill 0.2s;
+}
+footer.main-footer > .footer-content-container > .navigation > .navigation-bottom > .socials-container > .socials-box > .links-container > a > svg:hover {
+  fill: #bfbbff;
+}
+
+/*# sourceMappingURL=MainFooter.css.map */

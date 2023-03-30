@@ -1,0 +1,66 @@
+@import "../../main"
+
+
+
+section.main-section
+  @include header-section-footer
+
+  >.content-container
+    margin: 0 auto
+    min-width: 880px
+    width: 880px
+
+    >.title-block
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-top: 50px
+
+      >.main-title
+        color: $dark-grey-color
+        font-size: 50px
+        font-weight: 300
+        margin: 80px 0 0 0
+
+
+    >.search-block
+      background-color: #F6F5FA
+      display: flex
+      height: 90px
+      margin-right: 340px
+
+      >.search-icon
+        display: block
+        height: 18px
+        margin: auto 10px auto 20px
+        width: 18px
+
+      >.search-input
+        background-color: transparent
+        border: none
+        font-family: "Manrope"
+        height: 100%
+        outline: none
+        padding: 0 20px 0 5px
+        width: calc(100% - 48px)
+
+      >.search-input::placeholder
+        color: #808080
+
+
+    >.anchors-block
+      display: flex
+      flex-direction: row
+      justify-content: right
+
+      .anchor.blue
+        @include link-box
+
+      .anchor.blue:hover
+        background-color: darken($main-blue-color, 20%)
+
+      .anchor.black
+        @include link-box($main-black-color)
+
+      .anchor.black:hover
+        background-color: lighten($main-black-color, 20%)

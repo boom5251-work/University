@@ -20,7 +20,14 @@ namespace University.Pages.Account
         protected void Page_Load(object sender, EventArgs e)
         {
             if (User.Identity.IsAuthenticated)
-                RedirectFromLoginPage("/");
+            {
+                if (TryGetEducator())
+                    RedirectFromLoginPage("Account/Educator");
+                else if (TryGetStudent())
+                    RedirectFromLoginPage("Account/Student");
+                else
+                    FormsAuthentication.SignOut();
+            }
         }
 
 
@@ -49,7 +56,7 @@ namespace University.Pages.Account
 
 
         /// <summary>
-        /// Пытается найти и извлечь преподавателя из БД по адресу электронной почты и паролю.
+        /// Пытается найти и извлечь преподавателя из БД по данным из формы.
         /// </summary>
         /// <param name="educator">Преподаватель.</param>
         /// <returns>True - если преподаватель найден. False - нет.</returns>
@@ -68,7 +75,23 @@ namespace University.Pages.Account
 
 
         /// <summary>
-        /// Пытается найти и извлечь студента из БД по адресу электронной почты и паролю.
+        /// Пытается найти и извлечь преподавателя из БД по адресу электронной почты
+        /// </summary>
+        /// <returns>True - если преподаватель найден. False - нет.</returns>
+        private bool TryGetEducator()
+        {
+            string email = User.Identity.Name;
+
+            var context = new DatabaseContext();
+
+            var educator = context.Educators.SingleOrDefault(_educator => _educator.Email == email);
+
+            return educator != null;
+        }
+
+
+        /// <summary>
+        /// Пытается найти и извлечь студента из БД по данным из формы.
         /// </summary>
         /// <param name="student">Студент.</param>
         /// <returns>True - если студент найден. False - нет.</returns>
@@ -81,6 +104,22 @@ namespace University.Pages.Account
 
             student = context.Students.SingleOrDefault(_student =>
                 _student.Email == email && _student.Password == password);
+
+            return student != null;
+        }
+
+
+        /// <summary>
+        /// Пытается найти и извлечь студента из БД по адресу электронной почты.
+        /// </summary>
+        /// <returns>True - если студент найден. False - нет.</returns>
+        private bool TryGetStudent()
+        {
+            string email = User.Identity.Name;
+
+            var context = new DatabaseContext();
+
+            var student = context.Students.SingleOrDefault(_student => _student.Email == email);
 
             return student != null;
         }

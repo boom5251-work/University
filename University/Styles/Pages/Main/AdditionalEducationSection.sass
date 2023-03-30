@@ -1,0 +1,111 @@
+@import "../../Main"
+
+
+
+@mixin education-cell($bg-color: transparent)
+  background-color: $bg-color
+  border: 1px solid lighten($main-blue-color, 20%)
+  box-sizing: border-box
+  height: 220px
+  width: 220px
+
+
+
+section.additional-education-section
+  @include header-section-footer
+
+  background-color: $main-blue-color
+  padding: 170px 0 120px 0
+
+  >.content-container
+    display: grid
+    grid-template-areas: "A A A B" "C D E F"
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    margin: 0 auto
+    width: 880px
+
+    >.text-block
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      grid-area: A
+      padding-right: 70px
+      transform: translateY(-40px)
+
+      >.header
+        color: white
+        font-size: 32px
+        font-weight: 300
+        margin: 0 50px 0 0
+
+      >.text
+        color: white
+        font-size: 12px
+        transform: translateY(-5px)
+
+
+    >.education-cell
+      @include education-cell
+
+      border: 1px solid lighten($main-blue-color, 20%)
+      display: flex
+      flex-direction: column
+      flex-wrap: nowrap
+      justify-content: flex-end
+      padding: 15px 25px
+
+      >.label
+        color: white
+        font-size: 14px
+        font-weight: 600
+
+      >.label.top
+        margin-bottom: 55px
+        font-weight: 300
+
+      >.label.highlighted
+        color: lighten($main-aqua-color, 10%)
+        margin-bottom: 4px
+
+      >a
+        display: block
+        height: 44px
+
+      .more-button
+        cursor: pointer
+        height: 28px
+        margin: 16px auto 0 0
+        transition: fill .2s
+        width: 28px
+
+      .more-button:hover
+        fill: white
+
+      .more-button.highlighted:hover
+        fill: $medium-grey-color
+
+
+    >.education-cell.cell-d
+      grid-area: D
+      transform: translate(2px, -1px)
+
+    >.education-cell.cell-e
+      @include education-cell(white)
+
+      >.label
+        color: $dark-grey-color
+
+      >.label.highlighted
+        color: darken($main-aqua-color, 15%)
+
+      grid-area: E
+      transform: translate(1px, -1px)
+
+
+    >.sphere
+      left: calc((100% - 880px) / 2 + 450px)
+      position: absolute
+      top: 1450px
+      width: 200px
+      z-index: 100

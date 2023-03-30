@@ -12,15 +12,10 @@
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body>
     <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-
-            </Scripts>
-        </asp:ScriptManager>
-
         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
     </form>
 </body>

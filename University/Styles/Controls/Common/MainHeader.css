@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header.main-header {
+  margin: 0;
+  width: 100%;
+}
+header.main-header > .header-content-container {
+  border-bottom: 1px solid #DDD;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-height: 100px;
+  width: 880px;
+}
+header.main-header > .header-content-container > .logo-container {
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  padding: 25px 0;
+}
+header.main-header > .header-content-container > .logo-container > img {
+  height: 50px;
+}
+header.main-header > .header-content-container > .main-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 14px 0 25px 0;
+  max-width: 600px;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top {
+  display: flex;
+  justify-content: right;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top > .link-container {
+  margin-right: 24px;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top > .lang-container {
+  display: flex;
+  flex-direction: row;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top > .lang-container > .lang-button-link {
+  color: #AAA;
+  cursor: pointer;
+  display: block;
+  height: 27px;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top > .lang-container > .lang-button-link > .lang-button-text {
+  display: block;
+  font-size: 12px;
+  font-weight: bolder;
+  transform: translateY(4px);
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top > .lang-container > .lang-button-link > .lang-button-text.selected {
+  color: #DDD;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top > .lang-container > .lang-button-link:not(:last-of-type) {
+  margin-right: 12px;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top .tel-button {
+  border: 1px solid #AAA;
+  border-radius: 14px;
+  box-sizing: border-box;
+  height: 27px;
+  padding: 0 14px;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top .tel-button > span {
+  display: block;
+  color: #AAA;
+  font-size: 12px;
+  font-weight: bolder;
+  height: 15px;
+  padding: 5px 0;
+  transform: translateY(-1px);
+  transition: color 0.2s;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top .tel-button > span:hover {
+  color: #777777;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top .account-button {
+  background-color: #3022FF;
+  border-radius: 2px;
+  cursor: pointer;
+  display: block;
+  height: 15px;
+  padding: 6px 0;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top .account-button > span {
+  display: block;
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  margin: 0 16px;
+  transform: translateY(-1px);
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-top .account-button:hover {
+  background-color: #0c00bb;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  list-style: none;
+  margin: 0;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-links > li {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 0 0 0 24px;
+  transform: translateY(4px);
+  transition: color 0.2s;
+}
+header.main-header > .header-content-container > .main-navigation > .main-navigation-links > li:hover {
+  color: #b3b3b3;
+}
+
+/*# sourceMappingURL=MainHeader.css.map */

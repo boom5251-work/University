@@ -1,16 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Department.aspx.cs" Inherits="University.Pages.Department" %>
+﻿<%@ Page Language="C#"
+         MasterPageFile="~/Site.Master"
+         AutoEventWireup="true"
+         CodeBehind="Department.aspx.cs"
+         Inherits="University.Pages.Department" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="test" runat="server">
-        </div>
-    </form>
-</body>
-</html>
+<%@ Register TagPrefix="common" TagName="MainHeader" Src="~/Controls/MainHeader.ascx" %>
+
+
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <link rel="stylesheet" href="/Styles/Controls/Common/MainHeader.css" />
+</asp:Content>
+
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <common:MainHeader runat="server" />
+
+
+    <div id="test" runat="server"></div>
+</asp:Content>

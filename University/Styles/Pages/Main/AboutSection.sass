@@ -1,0 +1,49 @@
+@import "../../main"
+
+
+
+section.about-section
+  @include header-section-footer
+
+  background-color: #F6F5FA
+
+
+  >.content-container
+    margin: 0 auto
+    padding-top: 120px
+    width: 880px
+
+    >.text-container
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      justify-content: space-between
+
+      >.header
+        color: $dark-grey-color
+        font-size: 32px
+        font-weight: 300
+        margin: 0 40px 0 0
+
+      >p
+        color: $dark-grey-color
+        display: inline-block
+        font-size: 11px
+        max-width: 220px
+
+    >.link-container
+      height: 95px
+
+      .link-box
+        @include link-box($main-black-color)
+        margin: 100px 0 0 658px
+
+      .link-box:hover
+        background-color: lighten($main-black-color, 20%)
+
+
+    >.sphere
+      left: calc((100% - 880px) / 2 + 140px)
+      position: absolute
+      top: 870px
+      z-index: 100

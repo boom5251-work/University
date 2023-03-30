@@ -59,6 +59,20 @@ namespace University
                 "Account/Student",
                 "~/Pages/Account/StudentAccount.aspx"
             );
+
+            // Все новости.
+            routes.MapPageRoute(
+                "News",
+                "News",
+                "~/Pages/News/News.aspx"
+            );
+
+            // Новостная запись.
+            routes.MapPageRoute(
+                "HeadlineById",
+                "News/Headline/{id}",
+                "~/Pages/News/Headline.aspx"
+            );
         }
     }
 }

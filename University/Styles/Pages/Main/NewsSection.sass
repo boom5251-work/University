@@ -1,0 +1,60 @@
+@import "../../Main"
+
+
+
+section.news-section
+  @include header-section-footer
+
+
+  >.content-container
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    margin: 60px auto 100px auto
+    width: 880px
+
+    >.text-container
+      width: 240px
+
+      >.header
+        color: $dark-grey-color
+        font-size: 32px
+        font-weight: 300
+        margin: 0 0 25px 0
+
+      >.all-link
+        border-bottom: 1px solid $main-aqua-color
+        color: $dark-grey-color
+        cursor: pointer
+        font-size: 13px
+        font-weight: 600
+        padding-bottom: 5px
+        transition: .2s
+
+      >.all-link:hover
+        color: $medium-grey-color
+        border-bottom-color: lighten($main-aqua-color, 30%)
+
+      >.move-buttons-container
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        margin-top: 165px
+
+        .arrow-button
+          cursor: pointer
+          height: 32px
+          transition: fill .2s
+          width: 32px
+
+        .arrow-button:hover
+          fill: $medium-grey-color
+
+        .arrow-button:last-of-type
+          margin-left: 20px
+
+
+    >.news-container
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap

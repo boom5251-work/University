@@ -1,0 +1,57 @@
+@import "../../Main"
+
+
+
+section.life-section
+  @include header-section-footer
+
+
+  >.content-container
+    display: grid
+    grid-template-columns: 380px auto auto
+    grid-template-areas: "A B C" "A D E"
+    margin: 0 auto
+    padding-bottom: 90px
+    width: 880px
+
+    >.text-container
+      grid-area: A
+      margin-right: 80px
+
+      >.header
+        color: $dark-grey-color
+        font-size: 32px
+        font-weight: 300
+        margin: 100px 0 25px 0
+
+      >.text
+        font-size: 12px
+        margin: 0 0 15px 0
+
+      .link-box
+        @include link-box()
+        margin-top: 25px
+
+      .link-box:hover
+        background-color: darken($main-blue-color, 20%)
+
+
+    >.life-image
+      height: 250px
+      margin: 0 0 0 auto
+
+    >.life-image:nth-of-type(1)
+      grid-area: B
+      transform: translateY(-30px)
+
+    >.life-image:nth-of-type(2)
+      grid-area: C
+      transform: translateY(40px)
+
+    >.life-image:nth-of-type(3)
+      grid-area: D
+      transform: translateY(20px)
+
+    >.life-image:nth-of-type(4)
+      grid-area: E
+      transform: translateY(90px)

@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+section.news-section {
+  margin: 0;
+  width: 100%;
+}
+section.news-section > .content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 60px auto 100px auto;
+  width: 880px;
+}
+section.news-section > .content-container > .text-container {
+  width: 240px;
+}
+section.news-section > .content-container > .text-container > .header {
+  color: #282828;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 0 25px 0;
+}
+section.news-section > .content-container > .text-container > .all-link {
+  border-bottom: 1px solid #61D9CB;
+  color: #282828;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  transition: 0.2s;
+}
+section.news-section > .content-container > .text-container > .all-link:hover {
+  color: #AAA;
+  border-bottom-color: #dcf7f4;
+}
+section.news-section > .content-container > .text-container > .move-buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 165px;
+}
+section.news-section > .content-container > .text-container > .move-buttons-container .arrow-button {
+  cursor: pointer;
+  height: 32px;
+  transition: fill 0.2s;
+  width: 32px;
+}
+section.news-section > .content-container > .text-container > .move-buttons-container .arrow-button:hover {
+  fill: #AAA;
+}
+section.news-section > .content-container > .text-container > .move-buttons-container .arrow-button:last-of-type {
+  margin-left: 20px;
+}
+section.news-section > .content-container > .news-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/*# sourceMappingURL=NewsSection.css.map */

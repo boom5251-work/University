@@ -1,0 +1,79 @@
+@import "../../Main"
+
+
+
+section.faculties-section
+  @include header-section-footer
+
+
+  >.content-container
+    display: grid
+    grid-template-columns: auto 24px 240px 240px
+    grid-template-rows: repeat(4, 250px)
+    margin: 100px auto 0 auto
+    width: 880px
+
+    >.text-container
+      grid-row-start: 1
+      grid-row-end: 5
+      width: 300px
+
+      >.header
+        color: $dark-grey-color
+        font-size: 32px
+        font-weight: 300
+        margin: 0 0 25px 0
+
+      >.text
+        font-size: 12px
+
+      .link-box
+        @include link-box($main-black-color)
+        margin-top: 25px
+
+      .link-box:hover
+        background-color: lighten($main-black-color, 20%)
+
+
+    >.separator
+      background-color: #FBFBFB
+      grid-row-start: 1
+      grid-row-end: 5
+      height: calc(100% - 50px)
+      margin-right: 20px
+      width: 4px
+
+
+    >.faculty-block
+      display: grid
+      grid-template-rows: 35px 50px 95px 28px
+      margin-left: 40px
+      width: 200px
+
+      >.logo-icon
+        height: 22px
+        width: 22px
+
+      >.title
+        color: $dark-grey-color
+        font-size: 13px
+        font-weight: 600
+
+      >.description
+        color: $medium-grey-color
+        font-size: 12px
+        margin: 0
+
+      .more-button
+        cursor: pointer
+        height: 28px
+        transition: fill .2s
+
+      .more-button:hover
+        fill: $medium-grey-color
+
+
+  >.sphere
+    left: calc((100% - 880px) / 2 - 150px)
+    position: absolute
+    top: 3000px

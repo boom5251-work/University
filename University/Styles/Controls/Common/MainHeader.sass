@@ -1,0 +1,136 @@
+@import "../../Main"
+
+
+
+@mixin social-icon()
+  height: 20px
+  fill: $medium-grey-color
+  transition: fill .2s
+  width: 20px
+
+  &:hover
+    fill: darken($medium-grey-color, 20%)
+
+
+
+header.main-header
+  @include header-section-footer
+
+
+  >.header-content-container
+    border-bottom: 1px solid $light-grey-color
+    display: flex
+    flex-direction: row
+    height: 100px
+    justify-content: space-between
+    margin: 0 auto
+    max-height: 100px
+    width: 880px
+
+    >.logo-container
+      cursor: pointer
+      display: block
+      height: 50px
+      padding: 25px 0
+
+      >img
+        height: 50px
+
+    >.main-navigation
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin: 14px 0 25px 0
+      max-width: 600px
+
+      >.main-navigation-top
+        display: flex
+        justify-content: right
+
+        >.link-container
+          margin-right: 24px
+
+
+        >.lang-container
+          display: flex
+          flex-direction: row
+
+          >.lang-button-link
+            color: $medium-grey-color
+            cursor: pointer
+            display: block
+            height: 27px
+
+            >.lang-button-text
+              display: block
+              font-size: 12px
+              font-weight: bolder
+              transform: translateY(4px)
+
+            >.lang-button-text.selected
+              color: $light-grey-color
+
+          >.lang-button-link:not(:last-of-type)
+            margin-right: 12px
+
+
+        .tel-button
+          border: 1px solid $medium-grey-color
+          border-radius: 14px
+          box-sizing: border-box
+          height: 27px
+          padding: 0 14px
+
+          >span
+            display: block
+            color: $medium-grey-color
+            font-size: 12px
+            font-weight: bolder
+            height: 15px
+            padding: 5px 0
+            transform: translateY(-1px)
+            transition: color .2s
+
+          >span:hover
+            color: darken($medium-grey-color, 20%)
+
+
+        .account-button
+          background-color: $main-blue-color
+          border-radius: 2px
+          cursor: pointer
+          display: block
+          height: 15px
+          padding: 6px 0
+          user-select: none
+          transition: background-color .2s
+
+          >span
+            display: block
+            color: white
+            font-size: 12px
+            font-weight: bolder
+            margin: 0 16px
+            transform: translateY(-1px)
+
+        .account-button:hover
+          background-color: darken($main-blue-color, 20%)
+
+
+      >.main-navigation-links
+        display: flex
+        flex-direction: row
+        justify-content: right
+        list-style: none
+        margin: 0
+
+        >li
+          cursor: pointer
+          font-size: 13px
+          font-weight: bolder
+          margin: 0 0 0 24px
+          transform: translateY(4px)
+          transition: color .2s
+
+        >li:hover
+          color: lighten($main-black-color, 70%)

@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+section.life-section {
+  margin: 0;
+  width: 100%;
+}
+section.life-section > .content-container {
+  display: grid;
+  grid-template-columns: 380px auto auto;
+  grid-template-areas: "A B C" "A D E";
+  margin: 0 auto;
+  padding-bottom: 90px;
+  width: 880px;
+}
+section.life-section > .content-container > .text-container {
+  grid-area: A;
+  margin-right: 80px;
+}
+section.life-section > .content-container > .text-container > .header {
+  color: #282828;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 100px 0 25px 0;
+}
+section.life-section > .content-container > .text-container > .text {
+  font-size: 12px;
+  margin: 0 0 15px 0;
+}
+section.life-section > .content-container > .text-container .link-box {
+  background-color: #3022FF;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 600;
+  height: 95px;
+  justify-content: space-between;
+  min-width: 170px;
+  padding: 18px 15px 10px 15px;
+  transition: background-color 0.2s;
+  width: 170px;
+  margin-top: 25px;
+}
+section.life-section > .content-container > .text-container .link-box > img.arrow-icon {
+  height: 14px;
+  margin-left: auto;
+  width: 14px;
+}
+section.life-section > .content-container > .text-container .link-box:hover {
+  background-color: #0c00bb;
+}
+section.life-section > .content-container > .life-image {
+  height: 250px;
+  margin: 0 0 0 auto;
+}
+section.life-section > .content-container > .life-image:nth-of-type(1) {
+  grid-area: B;
+  transform: translateY(-30px);
+}
+section.life-section > .content-container > .life-image:nth-of-type(2) {
+  grid-area: C;
+  transform: translateY(40px);
+}
+section.life-section > .content-container > .life-image:nth-of-type(3) {
+  grid-area: D;
+  transform: translateY(20px);
+}
+section.life-section > .content-container > .life-image:nth-of-type(4) {
+  grid-area: E;
+  transform: translateY(90px);
+}
+
+/*# sourceMappingURL=LifeSection.css.map */

@@ -76,6 +76,11 @@ namespace University.DataAccess
         public DbSet<GroupStudent> GroupsStudents { get; set; }
 
         /// <summary>
+        /// Набор новостных записей.
+        /// </summary>
+        public DbSet<Headline> Headlines { get; set; }
+
+        /// <summary>
         /// Набор ролей.
         /// </summary>
         public DbSet<Role> Roles { get; set; }

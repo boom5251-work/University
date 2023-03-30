@@ -97,6 +97,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\MainFooter.ascx" />
+    <Content Include="Controls\MainHeader.ascx" />
+    <Content Include="Controls\Main\HeadlineBlock.ascx" />
     <Content Include="ErrorStatus.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="favicon.ico" />
@@ -106,8 +109,46 @@
     <Content Include="Pages\Department.aspx" />
     <Content Include="Pages\Institute.aspx" />
     <Content Include="Pages\Account\Login.aspx" />
+    <Content Include="Pages\News\Headline.aspx" />
+    <Content Include="Pages\News\News.aspx" />
     <Content Include="Pages\TrainingProgram.aspx" />
+    <Content Include="Resources\Icons\AI.svg" />
+    <Content Include="Resources\Icons\ATIP.svg" />
+    <Content Include="Resources\Icons\CDT.svg" />
+    <Content Include="Resources\Icons\IT.svg" />
+    <Content Include="Resources\Icons\Lomonosov.svg" />
+    <Content Include="Resources\Icons\MT.svg" />
+    <Content Include="Resources\Icons\RECS.svg" />
+    <Content Include="Resources\Icons\Search.svg" />
+    <Content Include="Resources\Icons\Arrow.svg" />
+    <Content Include="Resources\Images\Life1.png" />
+    <Content Include="Resources\Images\Life2.png" />
+    <Content Include="Resources\Images\Life3.png" />
+    <Content Include="Resources\Images\Life4.png" />
+    <Content Include="Resources\Images\MainLogo.png" />
+    <Content Include="Resources\Images\Sphere.png" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxWebServices.js" />
     <Content Include="Site.Master" />
+    <Content Include="Styles\Controls\Common\MainFooter.css" />
+    <Content Include="Styles\Controls\Common\MainHeader.css" />
+    <Content Include="Styles\Controls\Main\HeadlineBlock.css" />
+    <Content Include="Styles\Main.css" />
+    <Content Include="Styles\Pages\Main\AboutSection.css" />
+    <Content Include="Styles\Pages\Main\AdditionalEducationSection.css" />
+    <Content Include="Styles\Pages\Main\FacultiesSection.css" />
+    <Content Include="Styles\Pages\Main\LifeSection.css" />
+    <Content Include="Styles\Pages\Main\MainSection.css" />
+    <Content Include="Styles\Pages\Main\NewsSection.css" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -115,6 +156,27 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controls\MainFooter.ascx.cs">
+      <DependentUpon>MainFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainFooter.ascx.designer.cs">
+      <DependentUpon>MainFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainHeader.ascx.cs">
+      <DependentUpon>MainHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainHeader.ascx.designer.cs">
+      <DependentUpon>MainHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Main\HeadlineBlock.ascx.cs">
+      <DependentUpon>HeadlineBlock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Main\HeadlineBlock.ascx.designer.cs">
+      <DependentUpon>HeadlineBlock.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ErrorStatus.aspx.cs">
       <DependentUpon>ErrorStatus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +230,20 @@
     <Compile Include="Pages\Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\News\Headline.aspx.cs">
+      <DependentUpon>Headline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\News\Headline.aspx.designer.cs">
+      <DependentUpon>Headline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\News\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\News\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TrainingProgram.aspx.cs">
       <DependentUpon>TrainingProgram.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +272,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Styles\Main.css.map" />
+    <Content Include="Styles\Main.sass" />
+    <Content Include="Resources\Fonts\Manrope.ttf" />
+    <Content Include="Styles\Controls\Common\MainHeader.css.map" />
+    <Content Include="Styles\Controls\Common\MainHeader.sass" />
+    <Content Include="Styles\Pages\Main\MainSection.css.map" />
+    <Content Include="Styles\Pages\Main\MainSection.sass" />
+    <Content Include="Styles\Controls\Common\MainFooter.css.map" />
+    <Content Include="Styles\Controls\Common\MainFooter.sass" />
+    <Content Include="Styles\Pages\Main\AboutSection.css.map" />
+    <Content Include="Styles\Pages\Main\AboutSection.sass" />
+    <Content Include="Styles\Pages\Main\AdditionalEducationSection.css.map" />
+    <Content Include="Styles\Pages\Main\AdditionalEducationSection.sass" />
+    <Content Include="Styles\Pages\Main\LifeSection.css.map" />
+    <Content Include="Styles\Pages\Main\LifeSection.sass" />
+    <Content Include="Styles\Pages\Main\FacultiesSection.css.map" />
+    <Content Include="Styles\Pages\Main\FacultiesSection.sass" />
+    <Content Include="Styles\Pages\Main\NewsSection.css.map" />
+    <Content Include="Styles\Pages\Main\NewsSection.sass" />
+    <Content Include="Styles\Controls\Main\HeadlineBlock.css.map" />
+    <Content Include="Styles\Controls\Main\HeadlineBlock.sass" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

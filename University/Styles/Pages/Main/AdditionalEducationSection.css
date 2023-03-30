@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+section.additional-education-section {
+  margin: 0;
+  width: 100%;
+  background-color: #3022FF;
+  padding: 170px 0 120px 0;
+}
+section.additional-education-section > .content-container {
+  display: grid;
+  grid-template-areas: "A A A B" "C D E F";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+  width: 880px;
+}
+section.additional-education-section > .content-container > .text-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  grid-area: A;
+  padding-right: 70px;
+  transform: translateY(-40px);
+}
+section.additional-education-section > .content-container > .text-block > .header {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 50px 0 0;
+}
+section.additional-education-section > .content-container > .text-block > .text {
+  color: white;
+  font-size: 12px;
+  transform: translateY(-5px);
+}
+section.additional-education-section > .content-container > .education-cell {
+  background-color: transparent;
+  border: 1px solid #9088ff;
+  box-sizing: border-box;
+  height: 220px;
+  width: 220px;
+  border: 1px solid #9088ff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding: 15px 25px;
+}
+section.additional-education-section > .content-container > .education-cell > .label {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+section.additional-education-section > .content-container > .education-cell > .label.top {
+  margin-bottom: 55px;
+  font-weight: 300;
+}
+section.additional-education-section > .content-container > .education-cell > .label.highlighted {
+  color: #8ae3d9;
+  margin-bottom: 4px;
+}
+section.additional-education-section > .content-container > .education-cell > a {
+  display: block;
+  height: 44px;
+}
+section.additional-education-section > .content-container > .education-cell .more-button {
+  cursor: pointer;
+  height: 28px;
+  margin: 16px auto 0 0;
+  transition: fill 0.2s;
+  width: 28px;
+}
+section.additional-education-section > .content-container > .education-cell .more-button:hover {
+  fill: white;
+}
+section.additional-education-section > .content-container > .education-cell .more-button.highlighted:hover {
+  fill: #AAA;
+}
+section.additional-education-section > .content-container > .education-cell.cell-d {
+  grid-area: D;
+  transform: translate(2px, -1px);
+}
+section.additional-education-section > .content-container > .education-cell.cell-e {
+  background-color: white;
+  border: 1px solid #9088ff;
+  box-sizing: border-box;
+  height: 220px;
+  width: 220px;
+  grid-area: E;
+  transform: translate(1px, -1px);
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > .label {
+  color: #282828;
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > .label.highlighted {
+  color: #2ebfae;
+}
+section.additional-education-section > .content-container > .sphere {
+  left: calc((100% - 880px) / 2 + 450px);
+  position: absolute;
+  top: 1450px;
+  width: 200px;
+  z-index: 100;
+}
+
+/*# sourceMappingURL=AdditionalEducationSection.css.map */
