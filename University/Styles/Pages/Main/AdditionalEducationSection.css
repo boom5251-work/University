@@ -56,14 +56,13 @@ section.additional-education-section > .content-container > .education-cell {
   background-color: transparent;
   border: 1px solid #9088ff;
   box-sizing: border-box;
-  height: 220px;
-  width: 220px;
-  border: 1px solid #9088ff;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  height: 220px;
   justify-content: flex-end;
   padding: 15px 25px;
+  width: 220px;
 }
 section.additional-education-section > .content-container > .education-cell > .label {
   color: white;
@@ -71,28 +70,29 @@ section.additional-education-section > .content-container > .education-cell > .l
   font-weight: 600;
 }
 section.additional-education-section > .content-container > .education-cell > .label.top {
-  margin-bottom: 55px;
   font-weight: 300;
+  margin-bottom: 55px;
 }
 section.additional-education-section > .content-container > .education-cell > .label.highlighted {
-  color: #8ae3d9;
+  color: #61D9CB;
+  font-weight: 600;
   margin-bottom: 4px;
 }
 section.additional-education-section > .content-container > .education-cell > a {
   display: block;
   height: 44px;
 }
-section.additional-education-section > .content-container > .education-cell .more-button {
+section.additional-education-section > .content-container > .education-cell > a > .more-button {
   cursor: pointer;
   height: 28px;
   margin: 16px auto 0 0;
   transition: fill 0.2s;
   width: 28px;
 }
-section.additional-education-section > .content-container > .education-cell .more-button:hover {
+section.additional-education-section > .content-container > .education-cell > a > .more-button:hover {
   fill: white;
 }
-section.additional-education-section > .content-container > .education-cell .more-button.highlighted:hover {
+section.additional-education-section > .content-container > .education-cell > a > .more-button.highlighted:hover {
   fill: #AAA;
 }
 section.additional-education-section > .content-container > .education-cell.cell-d {
@@ -103,16 +103,46 @@ section.additional-education-section > .content-container > .education-cell.cell
   background-color: white;
   border: 1px solid #9088ff;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   height: 220px;
+  justify-content: flex-end;
+  padding: 15px 25px;
   width: 220px;
   grid-area: E;
   transform: translate(1px, -1px);
 }
 section.additional-education-section > .content-container > .education-cell.cell-e > .label {
   color: #282828;
+  font-size: 14px;
+  font-weight: 600;
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > .label.top {
+  font-weight: 300;
+  margin-bottom: 55px;
 }
 section.additional-education-section > .content-container > .education-cell.cell-e > .label.highlighted {
   color: #2ebfae;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > a {
+  display: block;
+  height: 44px;
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > a > .more-button {
+  cursor: pointer;
+  height: 28px;
+  margin: 16px auto 0 0;
+  transition: fill 0.2s;
+  width: 28px;
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > a > .more-button:hover {
+  fill: white;
+}
+section.additional-education-section > .content-container > .education-cell.cell-e > a > .more-button.highlighted:hover {
+  fill: #AAA;
 }
 section.additional-education-section > .content-container > .sphere {
   left: calc((100% - 880px) / 2 + 450px);

@@ -1,0 +1,51 @@
+@import "../../Main"
+
+
+
+section.departments-section
+  @include header-section-footer
+
+  background-color: #F6F5FA
+  padding: 100px 0
+
+  >.content-container
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    width: 880px
+
+    >.header
+      color: $dark-grey-color
+      font-size: 32px
+      font-weight: 300
+      margin: 0 0 25px 0
+
+    >.departments-links-container
+      display: grid
+      grid-template-columns: auto 170px
+      margin-top: 30px
+
+      >.base-departments-text
+        color: $medium-grey-color
+        font-size: 12px
+        margin: 0 100px 0 0
+
+        >.link
+          color: $main-aqua-color
+          cursor: pointer
+          font-weight: 600
+          transition: color .2s
+
+        >.link:hover
+          color: darken($main-aqua-color, 15%)
+
+      >a
+        display: block
+        margin-left: calc(100% - 170px)
+        width: 170px
+
+        .link-box
+          @include link-box()
+
+        .link-box:hover
+          background-color: darken($main-blue-color, 20%)

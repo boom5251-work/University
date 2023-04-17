@@ -1,0 +1,29 @@
+@import "../../Main"
+
+
+
+.heads-section
+  @include header-section-footer
+
+  >.content-container
+    margin: 0 auto
+    width: 880px
+
+    >.header
+      color: $dark-grey-color
+      font-size: 32px
+      font-weight: 300
+      margin: 100px 0 25px 0
+
+    >.heads-container
+      display: grid
+      grid-template-columns: repeat(3, auto)
+      grid-template-rows: repeat(4, auto)
+      margin-bottom: 50px
+
+      >.separator
+        background-color: #FBFBFB
+        grid-column-end: 4
+        grid-column-start: 1
+        height: 4px
+        width: 100%

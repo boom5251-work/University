@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+section.main-section {
+  margin: 0;
+  width: 100%;
+  background-color: #3022FF;
+}
+section.main-section > .content-container {
+  color: white;
+  display: grid;
+  grid-template-columns: 420px auto;
+  margin: 0 auto;
+  padding: 80px 0 60px 0;
+  width: 880px;
+}
+section.main-section > .content-container > .text-container {
+  margin-right: 100px;
+}
+section.main-section > .content-container > .text-container > .header {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 0 35px 0;
+}
+section.main-section > .content-container > .text-container > .text {
+  font-size: 12px;
+  max-height: 100px;
+  margin: 0;
+  overflow-y: hidden;
+}
+section.main-section > .content-container > .fields-of-study-cell {
+  background-color: transparent;
+  border: 1px solid #9088ff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 220px;
+  justify-content: flex-end;
+  padding: 15px 25px;
+  width: 220px;
+  margin-top: auto;
+}
+section.main-section > .content-container > .fields-of-study-cell > .label {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+section.main-section > .content-container > .fields-of-study-cell > .label.top {
+  font-weight: 300;
+  margin-bottom: 55px;
+}
+section.main-section > .content-container > .fields-of-study-cell > .label.highlighted {
+  color: #61D9CB;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+section.main-section > .content-container > .fields-of-study-cell > a {
+  display: block;
+  height: 44px;
+}
+section.main-section > .content-container > .fields-of-study-cell > a > .more-button {
+  cursor: pointer;
+  height: 28px;
+  margin: 16px auto 0 0;
+  transition: fill 0.2s;
+  width: 28px;
+}
+section.main-section > .content-container > .fields-of-study-cell > a > .more-button:hover {
+  fill: white;
+}
+section.main-section > .content-container > .fields-of-study-cell > a > .more-button.highlighted:hover {
+  fill: #AAA;
+}
+section.main-section > .content-container > .sphere {
+  position: absolute;
+  right: calc((100% - 880px) / 2 - 100px);
+  top: -100px;
+  width: 300px;
+}
+
+/*# sourceMappingURL=MainSection.css.map */

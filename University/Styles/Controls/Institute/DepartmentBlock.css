@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.department-block {
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  height: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+  width: 100%;
+}
+.department-block > .department-block-text {
+  color: #282828;
+  display: block;
+  font-size: 13px;
+  margin: auto 25px;
+  transition: color 0.2s;
+}
+
+.department-block:hover {
+  transform: translateX(25px);
+}
+.department-block:hover > .department-block-text {
+  color: #AAA;
+}
+
+/*# sourceMappingURL=DepartmentBlock.css.map */

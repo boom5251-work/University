@@ -75,19 +75,20 @@ namespace University.Pages.Account.Identity
         /// <returns>Пользователь.</returns>
         private IUser FindUser<T>(string email)
         {
-            var context = new DatabaseContext();
-
-            if (typeof(T) == typeof(Educator))
+            using (var context = new DatabaseContext())
             {
-                return context.Educators.SingleOrDefault(educator => educator.Email == email);
-            }
-            else if (typeof(T) == typeof(Student))
-            {
-                return context.Students.SingleOrDefault(student => student.Email == email);
-            }
-            else
-            {
-                return null;
+                if (typeof(T) == typeof(Educator))
+                {
+                    return context.Educators.SingleOrDefault(educator => educator.Email == email);
+                }
+                else if (typeof(T) == typeof(Student))
+                {
+                    return context.Students.SingleOrDefault(student => student.Email == email);
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
@@ -99,33 +100,34 @@ namespace University.Pages.Account.Identity
         /// <returns>Флаги пользователя.</returns>
         private UserRoles GetUserRoles(IUser user)
         {
-            var context = new DatabaseContext();
-
-            var roleIds = new List<int>();
-
-            if (user is Educator)
+            using (var context = new DatabaseContext())
             {
-                roleIds = context.EducatorsRoles
-                    .Where(item => item.EducatorId == user.Id)
-                    .Select(item => item.RoleId)
-                    .ToList();
+                var roleIds = new List<int>();
+
+                if (user is Educator)
+                {
+                    roleIds = context.EducatorsRoles
+                        .Where(item => item.EducatorId == user.Id)
+                        .Select(item => item.RoleId)
+                        .ToList();
+                }
+                else if (user is Student)
+                {
+                    roleIds = context.StudentsRoles
+                        .Where(item => item.StudentId == user.Id)
+                        .Select(item => item.RoleId)
+                        .ToList();
+                }
+
+                UserRoles userRoles = UserRoles.None;
+
+                var roles = context.Roles.Where(role => roleIds.Contains(role.Id));
+
+                foreach (var role in roles)
+                    userRoles |= role.UserRole;
+
+                return userRoles;
             }
-            else if (user is Student)
-            {
-                roleIds = context.StudentsRoles
-                    .Where(item => item.StudentId == user.Id)
-                    .Select(item => item.RoleId)
-                    .ToList();
-            }
-
-            UserRoles userRoles = UserRoles.None;
-
-            var roles = context.Roles.Where(role => roleIds.Contains(role.Id));
-
-            foreach (var role in roles)
-                userRoles |= role.UserRole;
-
-            return userRoles;
 
         }
     }

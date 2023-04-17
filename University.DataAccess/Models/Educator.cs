@@ -33,6 +33,13 @@ namespace University.DataAccess.Models
         [MaxLength(30)]
         public string MiddleName { get; set; }
 
+        /// <summary>
+        /// Путь к фотографии пользователя.
+        /// </summary>
+        [StringLength(50, MinimumLength = 5)]
+        public string PhotoFileName { get; set; }
+
+
         [Required]
         [StringLength(320, MinimumLength = 6)]
         [Index(IsUnique = true)]

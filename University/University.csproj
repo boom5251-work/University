@@ -97,9 +97,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\Institute\DepartmentBlock.ascx" />
+    <Content Include="SiteData\Images\Photos\educator-107.png" />
+    <Content Include="SiteData\Images\Photos\educator-109.png" />
+    <Content Include="SiteData\Images\Photos\educator-11.png" />
     <Content Include="Controls\MainFooter.ascx" />
     <Content Include="Controls\MainHeader.ascx" />
     <Content Include="Controls\Main\HeadlineBlock.ascx" />
+    <Content Include="Controls\PersonInfo.ascx" />
     <Content Include="ErrorStatus.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="favicon.ico" />
@@ -121,6 +126,7 @@
     <Content Include="Resources\Icons\RECS.svg" />
     <Content Include="Resources\Icons\Search.svg" />
     <Content Include="Resources\Icons\Arrow.svg" />
+    <Content Include="Resources\Images\DefaultPersonPhoto.png" />
     <Content Include="Resources\Images\Life1.png" />
     <Content Include="Resources\Images\Life2.png" />
     <Content Include="Resources\Images\Life3.png" />
@@ -139,10 +145,19 @@
     <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxWebForms.js" />
     <Content Include="Scripts\WebForms\MsAjax\MicrosoftAjaxWebServices.js" />
     <Content Include="Site.Master" />
+    <Content Include="SiteData\Images\Photos\educator-108.png" />
+    <Content Include="SiteData\Images\Photos\educator-110.png" />
+    <Content Include="SiteData\Images\Photos\educator-111.png" />
+    <Content Include="SiteData\Images\Photos\educator-15.png" />
     <Content Include="Styles\Controls\Common\MainFooter.css" />
     <Content Include="Styles\Controls\Common\MainHeader.css" />
+    <Content Include="Styles\Controls\Common\PersonInfo.css" />
+    <Content Include="Styles\Controls\Institute\DepartmentBlock.css" />
     <Content Include="Styles\Controls\Main\HeadlineBlock.css" />
     <Content Include="Styles\Main.css" />
+    <Content Include="Styles\Pages\Institute\DepartmentsSection.css" />
+    <Content Include="Styles\Pages\Institute\HeadsSection.css" />
+    <Content Include="Styles\Pages\Institute\MainSection.css" />
     <Content Include="Styles\Pages\Main\AboutSection.css" />
     <Content Include="Styles\Pages\Main\AdditionalEducationSection.css" />
     <Content Include="Styles\Pages\Main\FacultiesSection.css" />
@@ -156,6 +171,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controls\Institute\DepartmentBlock.ascx.cs">
+      <DependentUpon>DepartmentBlock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Institute\DepartmentBlock.ascx.designer.cs">
+      <DependentUpon>DepartmentBlock.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainFooter.ascx.cs">
       <DependentUpon>MainFooter.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,6 +198,13 @@
     </Compile>
     <Compile Include="Controls\Main\HeadlineBlock.ascx.designer.cs">
       <DependentUpon>HeadlineBlock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PersonInfo.ascx.cs">
+      <DependentUpon>PersonInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PersonInfo.ascx.designer.cs">
+      <DependentUpon>PersonInfo.ascx</DependentUpon>
     </Compile>
     <Compile Include="ErrorStatus.aspx.cs">
       <DependentUpon>ErrorStatus.aspx</DependentUpon>
@@ -293,6 +322,16 @@
     <Content Include="Styles\Pages\Main\NewsSection.sass" />
     <Content Include="Styles\Controls\Main\HeadlineBlock.css.map" />
     <Content Include="Styles\Controls\Main\HeadlineBlock.sass" />
+    <Content Include="Styles\Pages\Institute\MainSection.css.map" />
+    <Content Include="Styles\Pages\Institute\MainSection.sass" />
+    <Content Include="Styles\Pages\Institute\HeadsSection.css.map" />
+    <Content Include="Styles\Pages\Institute\HeadsSection.sass" />
+    <Content Include="Styles\Controls\Common\PersonInfo.css.map" />
+    <Content Include="Styles\Controls\Common\PersonInfo.sass" />
+    <Content Include="Styles\Pages\Institute\DepartmentsSection.css.map" />
+    <Content Include="Styles\Pages\Institute\DepartmentsSection.sass" />
+    <Content Include="Styles\Controls\Institute\DepartmentBlock.css.map" />
+    <Content Include="Styles\Controls\Institute\DepartmentBlock.sass" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

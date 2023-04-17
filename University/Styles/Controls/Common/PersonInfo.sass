@@ -1,0 +1,28 @@
+@import "../../Main"
+
+
+
+.person-info-container
+  display: grid
+  grid-template-columns: 90px auto
+  grid-template-rows: 1fr 2fr
+  margin-top: 50px
+  padding-right: 50px
+
+  >.person-photo
+    background-color: $light-grey-color
+    border-radius: 35px
+    grid-column: 1
+    grid-row-end: 3
+    grid-row-start: 1
+    height: 70px
+    width: 70px
+
+  >.person-name
+    color: $dark-grey-color
+    font-size: 13px
+    font-weight: 600
+
+  >.person-description
+    color: $medium-grey-color
+    font-size: 12px

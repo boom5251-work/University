@@ -17,7 +17,7 @@ namespace University.DataAccess.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Название роли.
+        /// Название.
         /// </summary>
         [Required]
         public string Name { get; set; }

@@ -41,6 +41,50 @@ $main-black-color: black
     width: 14px
 
 
+@mixin link-cell($bg-color: transparent, $text-color: white, $highlighted-color: $main-aqua-color)
+  background-color: $bg-color
+  border: 1px solid lighten($main-blue-color, 20%)
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  height: 220px
+  justify-content: flex-end
+  padding: 15px 25px
+  width: 220px
+
+  >.label
+    color: $text-color
+    font-size: 14px
+    font-weight: 600
+
+  >.label.top
+    font-weight: 300
+    margin-bottom: 55px
+
+  >.label.highlighted
+    color: $highlighted-color
+    font-weight: 600
+    margin-bottom: 4px
+
+  >a
+    display: block
+    height: 44px
+
+    >.more-button
+      cursor: pointer
+      height: 28px
+      margin: 16px auto 0 0
+      transition: fill .2s
+      width: 28px
+
+    >.more-button:hover
+      fill: white
+
+    >.more-button.highlighted:hover
+      fill: $medium-grey-color
+
+
 
 p, a, span, li, div
   font-family: "Manrope"

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.heads-section {
+  margin: 0;
+  width: 100%;
+}
+.heads-section > .content-container {
+  margin: 0 auto;
+  width: 880px;
+}
+.heads-section > .content-container > .header {
+  color: #282828;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 100px 0 25px 0;
+}
+.heads-section > .content-container > .heads-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+  margin-bottom: 50px;
+}
+.heads-section > .content-container > .heads-container > .separator {
+  background-color: #FBFBFB;
+  grid-column-end: 4;
+  grid-column-start: 1;
+  height: 4px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=HeadsSection.css.map */

@@ -61,6 +61,11 @@ namespace University.DataAccess
         public DbSet<FacultyGroup> FacultiesGroups { get; set; }
 
         /// <summary>
+        /// Набор сущностей факультет-руководитель.
+        /// </summary>
+        public DbSet<FacultyHead> FacultiesHeads { get; set; }
+
+        /// <summary>
         /// Набор направлений подготовки.
         /// </summary>
         public DbSet<FieldOfStudy> FieldsOfStudy { get; set; }
@@ -79,6 +84,11 @@ namespace University.DataAccess
         /// Набор новостных записей.
         /// </summary>
         public DbSet<Headline> Headlines { get; set; }
+
+        /// <summary>
+        /// Набор должностей.
+        /// </summary>
+        public DbSet<Post> Posts { get; set; }
 
         /// <summary>
         /// Набор ролей.

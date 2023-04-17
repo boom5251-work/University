@@ -29,6 +29,8 @@ namespace University.Pages
                     test.Controls.Add(new LiteralControl($"<h1>{department.Name}</h1>"));
                     test.Controls.Add(new LiteralControl($"<h3>Заведующий кафедрой: {head.LastName} {head.FirstName} {head.MiddleName}</h3>"));
                 }
+
+                context.Dispose();
             }
         }
     }

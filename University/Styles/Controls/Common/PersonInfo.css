@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/Resources/Fonts/Manrope.ttf");
+}
+p, a, span, li, div {
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.person-info-container {
+  display: grid;
+  grid-template-columns: 90px auto;
+  grid-template-rows: 1fr 2fr;
+  margin-top: 50px;
+  padding-right: 50px;
+}
+.person-info-container > .person-photo {
+  background-color: #DDD;
+  border-radius: 35px;
+  grid-column: 1;
+  grid-row-end: 3;
+  grid-row-start: 1;
+  height: 70px;
+  width: 70px;
+}
+.person-info-container > .person-name {
+  color: #282828;
+  font-size: 13px;
+  font-weight: 600;
+}
+.person-info-container > .person-description {
+  color: #AAA;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=PersonInfo.css.map */

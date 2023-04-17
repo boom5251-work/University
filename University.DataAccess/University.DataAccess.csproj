@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,9 +99,24 @@
     <Compile Include="Migrations\202303291535520_Update7.designer.cs">
       <DependentUpon>202303291535520_Update7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303311531097_Update8.cs" />
+    <Compile Include="Migrations\202303311531097_Update8.designer.cs">
+      <DependentUpon>202303311531097_Update8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303311537101_Update9.cs" />
+    <Compile Include="Migrations\202303311537101_Update9.designer.cs">
+      <DependentUpon>202303311537101_Update9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304042100044_Update10.cs" />
+    <Compile Include="Migrations\202304042100044_Update10.designer.cs">
+      <DependentUpon>202304042100044_Update10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Base\EducatorPost.cs" />
     <Compile Include="Models\EducatorRole.cs" />
     <Compile Include="Models\Headline.cs" />
+    <Compile Include="Models\FacultyHead.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Models\StudentRole.cs" />
     <Compile Include="Models\Base\IUser.cs" />
     <Compile Include="Models\Base\UserRoles.cs" />
@@ -138,8 +168,36 @@
     <EmbeddedResource Include="Migrations\202303291535520_Update7.resx">
       <DependentUpon>202303291535520_Update7.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303311531097_Update8.resx">
+      <DependentUpon>202303311531097_Update8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303311537101_Update9.resx">
+      <DependentUpon>202303311537101_Update9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304042100044_Update10.resx">
+      <DependentUpon>202304042100044_Update10.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="UniversityDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UniversityDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -65,12 +65,13 @@ namespace University.Pages.Account
             string email = EmailInput.Text;
             string password = PasswordInput.Text;
 
-            var context = new DatabaseContext();
-
-            educator = context.Educators.SingleOrDefault(_educator => 
+            using (var context = new DatabaseContext())
+            {
+                educator = context.Educators.SingleOrDefault(_educator =>
                 _educator.Email == email && _educator.Password == password);
 
-            return educator != null;
+                return educator != null;
+            }            
         }
 
 
@@ -82,11 +83,11 @@ namespace University.Pages.Account
         {
             string email = User.Identity.Name;
 
-            var context = new DatabaseContext();
-
-            var educator = context.Educators.SingleOrDefault(_educator => _educator.Email == email);
-
-            return educator != null;
+            using (var context = new DatabaseContext())
+            {
+                var educator = context.Educators.SingleOrDefault(_educator => _educator.Email == email);
+                return educator != null;
+            }
         }
 
 
@@ -100,12 +101,13 @@ namespace University.Pages.Account
             string email = EmailInput.Text;
             string password = PasswordInput.Text;
 
-            var context = new DatabaseContext();
-
-            student = context.Students.SingleOrDefault(_student =>
+            using (var context = new DatabaseContext())
+            {
+                student = context.Students.SingleOrDefault(_student =>
                 _student.Email == email && _student.Password == password);
 
-            return student != null;
+                return student != null;
+            }            
         }
 
 
@@ -117,17 +119,18 @@ namespace University.Pages.Account
         {
             string email = User.Identity.Name;
 
-            var context = new DatabaseContext();
-
-            var student = context.Students.SingleOrDefault(_student => _student.Email == email);
-
-            return student != null;
+            using (var context = new DatabaseContext())
+            {
+                var student = context.Students.SingleOrDefault(_student => _student.Email == email);
+                return student != null;
+            }            
         }
 
 
         /// <summary>
         /// Осуществляет переход со страницы авторизации.
         /// </summary>
+        /// <param name="accountUrl">Путь к странице аккаунта.</param>
         private void RedirectFromLoginPage(string accountUrl)
         {
             string redirectUrl = Request.QueryString.Get("RedirectUrl");

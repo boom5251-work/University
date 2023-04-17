@@ -30,6 +30,8 @@ namespace University.Pages
                     test.Controls.Add(new LiteralControl($"<h1>{fieldOfStudy.Code} — {fieldOfStudy.Name}</h1>"));
                     test.Controls.Add(new LiteralControl($"<p>{fieldOfStudy.Description}</p>"));
                 }
+
+                context.Dispose();
             }
         }
     }
