@@ -13,9 +13,6 @@ namespace University.Controls
         /// </summary>
         /// <param name="sender">Объект, вызвавший событие.</param>
         /// <param name="e">Аргументы.</param>
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            return;
-        }
+        protected void Page_Load(object sender, EventArgs e) { }
     }
 }

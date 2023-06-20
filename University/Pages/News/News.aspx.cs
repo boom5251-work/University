@@ -1,17 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace University.Pages.News
 {
-    public partial class News : System.Web.UI.Page
+    /// <summary>
+    /// Страница отображения списка новостей.
+    /// </summary>
+    public partial class News : Page
     {
+        /// <summary>
+        /// Обрабатывает событие загрузки страницы.
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие.</param>
+        /// <param name="e">Аргументы.</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // TODO: Реализовать.
         }
     }
 }

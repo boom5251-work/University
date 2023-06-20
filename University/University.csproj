@@ -116,7 +116,6 @@
     <Content Include="Pages\Account\Login.aspx" />
     <Content Include="Pages\News\Headline.aspx" />
     <Content Include="Pages\News\News.aspx" />
-    <Content Include="Pages\TrainingProgram.aspx" />
     <Content Include="Resources\Icons\AI.svg" />
     <Content Include="Resources\Icons\ATIP.svg" />
     <Content Include="Resources\Icons\CDT.svg" />
@@ -272,13 +271,6 @@
     </Compile>
     <Compile Include="Pages\News\News.aspx.designer.cs">
       <DependentUpon>News.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\TrainingProgram.aspx.cs">
-      <DependentUpon>TrainingProgram.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\TrainingProgram.aspx.designer.cs">
-      <DependentUpon>TrainingProgram.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

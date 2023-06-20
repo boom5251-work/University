@@ -18,21 +18,22 @@ namespace University
         /// <param name="e">Аргументы.</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            var context = new DatabaseContext();
-
-            int skipCount = Math.Max(0, context.Headlines.Count() - 10);
-
-            var headlines = context.Headlines
-                .ToList()
-                .Skip(skipCount)
-                .OrderBy(_headline => _headline.PublishedAt)
-                .Reverse();
-
-            foreach (var headline in headlines)
+            using (var context = new DatabaseContext())
             {
-                var control = LoadControl(@"~\Controls\Main\HeadlineBlock.ascx") as HeadlineBlock;
-                control.Headline = headline;
-                NewsContainer.Controls.Add(control);
+                int skipCount = Math.Max(0, context.Headlines.Count() - 10);
+
+                var headlines = context.Headlines
+                    .OrderByDescending(_headline => _headline.PublishedAt)
+                    .AsEnumerable()
+                    .Skip(skipCount);
+                    
+
+                foreach (var headline in headlines)
+                {
+                    var control = LoadControl(@"~\Controls\Main\HeadlineBlock.ascx") as HeadlineBlock;
+                    control.Headline = headline;
+                    NewsContainer.Controls.Add(control);
+                }
             }
         }
     }

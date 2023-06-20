@@ -111,32 +111,22 @@
     <Compile Include="Migrations\202304042100044_Update10.designer.cs">
       <DependentUpon>202304042100044_Update10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306201545233_Update_11.cs" />
+    <Compile Include="Migrations\202306201545233_Update_11.designer.cs">
+      <DependentUpon>202306201545233_Update_11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Base\EducatorPost.cs" />
-    <Compile Include="Models\EducatorRole.cs" />
     <Compile Include="Models\Headline.cs" />
-    <Compile Include="Models\FacultyHead.cs" />
     <Compile Include="Models\Post.cs" />
-    <Compile Include="Models\StudentRole.cs" />
     <Compile Include="Models\Base\IUser.cs" />
     <Compile Include="Models\Base\UserRoles.cs" />
-    <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\CourseGroup.cs" />
     <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\DepartmentFieldOfStudy.cs" />
     <Compile Include="Models\Educator.cs" />
     <Compile Include="Models\Faculty.cs" />
-    <Compile Include="Models\FacultyFieldOfStudy.cs" />
-    <Compile Include="Models\FacultyGroup.cs" />
     <Compile Include="Models\FieldOfStudy.cs" />
-    <Compile Include="Models\Group.cs" />
-    <Compile Include="Models\GroupStudent.cs" />
     <Compile Include="Models\Role.cs" />
-    <Compile Include="Models\Specialization.cs" />
-    <Compile Include="Models\SpecializationSubject.cs" />
     <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\Subject.cs" />
-    <Compile Include="Models\SubjectEducator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,14 +167,13 @@
     <EmbeddedResource Include="Migrations\202304042100044_Update10.resx">
       <DependentUpon>202304042100044_Update10.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306201545233_Update_11.resx">
+      <DependentUpon>202306201545233_Update_11.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UniversityDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UniversityDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="UniversityDb.mdf" />
+    <Content Include="UniversityDb_log.ldf" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">

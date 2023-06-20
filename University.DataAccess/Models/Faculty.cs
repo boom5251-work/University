@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace University.DataAccess.Models
@@ -40,5 +41,22 @@ namespace University.DataAccess.Models
         /// </summary>
         [Required]
         public int ArgbColor { get; set; }
+
+
+
+        /// <summary>
+        /// Список руководителей.
+        /// </summary>
+        public List<Educator> Heads { get; set; }
+
+        /// <summary>
+        /// Список кафедр.
+        /// </summary>
+        public List<Department> Departments { get; set; }
+
+        /// <summary>
+        /// Список направлений подготовки.
+        /// </summary>
+        public List<FieldOfStudy> FieldsOfStudy { get; set; }
     }
 }

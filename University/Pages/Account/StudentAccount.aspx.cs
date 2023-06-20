@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using System.Reflection;
 using System.Web.Security;
 using System.Web.UI;
+using University.DataAccess;
 using University.DataAccess.Models;
 using University.DataAccess.Models.Base;
 using University.Pages.Account.Identity;
@@ -65,7 +68,15 @@ namespace University.Pages.Account
         private bool CheckIdentity(out IUser user)
         {
             var authorized = GetType().GetCustomAttribute<AuthorizedAttribute>();
-            return authorized.ValidateUser<Student>(User.Identity.Name, out user);
+
+            using (var context = new DatabaseContext())
+            {
+                user = context.Students.Include(student => student.Roles)
+                    .AsNoTracking()
+                    .SingleOrDefault(educator => educator.Email == User.Identity.Name);
+
+                return authorized.ValidateUser(user);
+            }
         }
 
 

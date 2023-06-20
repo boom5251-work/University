@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace University.DataAccess.Models
@@ -31,27 +32,19 @@ namespace University.DataAccess.Models
         [StringLength(10, MinimumLength = 1)]
         public string LatPath { get; set; }
 
-        /// <summary>
-        /// Идентификатор факультета (внешний ключ).
-        /// </summary>
-        public int FacultyId { get; set; }
-
-        /// <summary>
-        /// Идентификатор заведующего кафедрой (внешний ключ).
-        /// </summary>
-        public int HeadId { get; set; }
 
 
         /// <summary>
         /// Факультет.
         /// </summary>
-        [ForeignKey(nameof(FacultyId))]
         public Faculty Faculty { get; set; }
 
         /// <summary>
         /// Заведующий кафедрой.
         /// </summary>
-        [ForeignKey(nameof(HeadId))]
         public Educator Head { get; set; }
+
+
+        public List<FieldOfStudy> FieldOfStudies { get; set; }
     }
 }

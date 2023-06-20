@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace University.DataAccess.Models
@@ -34,5 +35,12 @@ namespace University.DataAccess.Models
         /// </summary>
         [Required]
         public string Description { get; set; }
+
+
+
+        /// <summary>
+        /// Список факультетов.
+        /// </summary>
+        public List<Faculty> Faculties { get; set; }
     }
 }

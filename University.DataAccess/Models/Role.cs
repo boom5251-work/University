@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using University.DataAccess.Models.Base;
 
@@ -27,6 +28,20 @@ namespace University.DataAccess.Models
         /// </summary>
         [Required]
         public int Code { get; set; }
+
+
+
+        /// <summary>
+        /// Список преподавателей
+        /// </summary>
+        public List<Educator> Educators { get; set; }
+
+        /// <summary>
+        /// Список студентов.
+        /// </summary>
+        public List<Student> Students { get; set; }
+
+        
 
         /// <summary>
         /// Роль пользователя.

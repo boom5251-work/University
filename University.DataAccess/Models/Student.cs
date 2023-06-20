@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using University.DataAccess.Models.Base;
 
@@ -49,13 +50,20 @@ namespace University.DataAccess.Models
         [Index(IsUnique = true)]
         public string PhoneNumber { get; set; }
 
+        /// <inheritdoc />
         [Required]
         [StringLength(320, MinimumLength = 6)]
         [Index(IsUnique = true)]
         public string Email { get; set; }
 
+        /// <inheritdoc />
         [Required]
         [StringLength(50, MinimumLength = 6)]
         public string Password { get; set; }
+
+
+
+        /// <inheritdoc />
+        public List<Role> Roles { get; set; }
     }
 }

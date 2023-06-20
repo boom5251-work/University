@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.UI;
 using University.Controls;
@@ -27,31 +28,27 @@ namespace University.Pages
 
             if (!string.IsNullOrEmpty(latPath))
             {
-                using (var context = new DatabaseContext())
+                // Получение основной информации.
+                var context = new DatabaseContext();
+
+                var faculty = context.Faculties
+                    .Include(_faculty => _faculty.Heads.Select(head => head.Post))
+                    .Include(_faculty => _faculty.Departments)
+                    .SingleOrDefault(_faculty => _faculty.LatPath == latPath);
+
+                context.Dispose();
+
+                if (faculty != null)
                 {
-                    // Получение основной информации.
-                    var faculty = context.Faculties.Single(_faculty => _faculty.LatPath == latPath);
                     ShowMainInfo(faculty);
+                    ShowHeads(faculty.Heads);
 
-                    // Получение руководителей.
-                    var facultiesHeads = context.FacultiesHeads
-                        .Where(item => item.FacultyId == faculty.Id)
-                        .ToList();
-
-                    facultiesHeads.ForEach((FacultyHead facultyHead) =>
-                    {
-                        facultyHead.Head = context.Educators.SingleOrDefault(head => head.Id == facultyHead.HeadId);
-                        facultyHead.Post = context.Posts.SingleOrDefault(post => post.Id == facultyHead.PostId);
-                    });
-
-                    ShowHeads(facultiesHeads);
-
-                    // Получение кафедр.
-                    var departments = context.Departments
-                        .Where(department => department.FacultyId == faculty.Id)
-                        .ToList();
-
+                    var departments = faculty.Departments?.Take(5);
                     ShowDepartments(departments);
+                } 
+                else
+                {
+                    // TODO: Добавить обработку ошибки.
                 }
             }
             else
@@ -61,6 +58,8 @@ namespace University.Pages
         }
 
 
+
+        #region Отображение данных.
         /// <summary>
         /// Отображает основную информацию.
         /// </summary>
@@ -80,21 +79,23 @@ namespace University.Pages
         /// <summary>
         /// Отображает руководителей факультета.
         /// </summary>
-        /// <param name="facultiesHeads">Список сущностей факультет-руководитель.</param>
-        private void ShowHeads(List<FacultyHead> facultiesHeads)
+        /// <param name="educators">Перечисление руководителей.</param>
+        private void ShowHeads(IEnumerable<Educator> educators)
         {
-            foreach (var item in facultiesHeads)
+            foreach (var educator in educators)
             {
                 var personInfo = LoadControl(@"~/Controls/PersonInfo.ascx") as PersonInfo;
 
-                if (!string.IsNullOrEmpty(item.Head.PhotoFileName))
-                    personInfo.ImageUrl = $"/SiteData/Images/Photos/{item.Head.PhotoFileName}";
+                if (!string.IsNullOrEmpty(educator.PhotoFileName))
+                    personInfo.ImageUrl = $"/SiteData/Images/Photos/{educator.PhotoFileName}";
 
-                personInfo.FullName = $"{item.Head?.LastName} {item.Head?.FirstName} {item.Head?.MiddleName}";
+                personInfo.FullName = $"{educator.LastName} {educator.FirstName} {educator.MiddleName}";
 
-                personInfo.Description = item.Post?.Name
-                    .Replace("Заместитель", "Зам.")
-                    .Replace("заместитель", "зам.");
+                string replacement = "Зам.";
+
+                personInfo.Description = educator.Post?.Name
+                    .Replace("Заместитель", replacement)
+                    .Replace("заместитель", replacement);
 
                 HeadsContainer.Controls.Add(personInfo);
             }
@@ -104,18 +105,10 @@ namespace University.Pages
         /// <summary>
         /// Отображает кафедры института.
         /// </summary>
-        /// <param name="departments">Список кафедр.</param>
-        private void ShowDepartments(List<DataAccess.Models.Department> departments)
+        /// <param name="departments">Перечисление кафедр.</param>
+        private void ShowDepartments(IEnumerable<DataAccess.Models.Department> departments)
         {
-            string value = "базовая кафедра";
-
-            var firstFiveDepartments = departments
-                .Where(department => department.Name.IndexOf(value, StringComparison.OrdinalIgnoreCase) == -1)
-                .OrderBy(department => department.Name)
-                .Take(5)
-                .ToList();
-
-            foreach (var department in firstFiveDepartments)
+            foreach (var department in departments)
             {
                 var departmentBlock = LoadControl(@"~/Controls/Institute/DepartmentBlock.ascx") as DepartmentBlock;
 
@@ -126,5 +119,6 @@ namespace University.Pages
                 DepartmentsContainer.Controls.Add(departmentBlock);
             }
         }
+        #endregion
     }
 }

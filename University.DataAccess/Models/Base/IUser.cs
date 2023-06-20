@@ -1,4 +1,6 @@
-﻿namespace University.DataAccess.Models.Base
+﻿using System.Collections.Generic;
+
+namespace University.DataAccess.Models.Base
 {
     /// <summary>
     /// Интерфейс пользователя.
@@ -19,5 +21,12 @@
         /// Пароль.
         /// </summary>
         string Password { get; set; }
+
+
+
+        /// <summary>
+        /// Список ролей.
+        /// </summary>
+        List<Role> Roles { get; set; }
     }
 }
