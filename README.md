@@ -21,7 +21,7 @@
   </li>
   <li>
      <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png?v8" height="16px" /> 
-    Присоедини базу данных локальному серверу.
+    Присоедини базу данных к локальному серверу.
   </li>
   
   <li>
